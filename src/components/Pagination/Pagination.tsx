@@ -24,7 +24,7 @@ export const Pagination = ({ currentPage, totalPages }: PaginationProps) => {
       <PaginationArrow
         direction="left"
         href={createPageUrl(currentPage - 1)}
-        disabled={currentPage === 1}
+        isDisabled={currentPage === 1}
       />
       <p className={styles.pageInfo}>
         Page{" "}
@@ -35,7 +35,7 @@ export const Pagination = ({ currentPage, totalPages }: PaginationProps) => {
       <PaginationArrow
         direction="right"
         href={createPageUrl(currentPage + 1)}
-        disabled={currentPage === totalPages}
+        isDisabled={currentPage === totalPages}
       />
     </div>
   );

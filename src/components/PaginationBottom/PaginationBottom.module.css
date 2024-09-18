@@ -4,11 +4,6 @@
   align-items: center;
   gap: 24px;
   margin-top: 64px;
-  --min-width-pagination: 240px;
-}
-
-.pagination {
-  min-width: var(--min-width-pagination);
 }
 
 @media (min-width: 1024px) {
@@ -16,12 +11,10 @@
     justify-content: space-between;
     flex-flow: row-reverse;
     align-items: center;
-
-    --min-width-pagination: 259px;
   }
 
   .paginationContainer::after {
     content: "";
-    min-width: var(--min-width-pagination);
+    min-width: 260px;
   }
 }

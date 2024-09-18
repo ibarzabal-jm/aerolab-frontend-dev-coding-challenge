@@ -1,20 +1,26 @@
 import Link from "next/link";
+import ChevronIcon from "@/assets/icons/chevron-default.svg";
 import styles from "./PaginationArrow.module.css";
 
 interface PaginationArrowProps {
   direction: "left" | "right";
   href?: string;
-  disabled: boolean;
+  isDisabled?: boolean;
 }
 
 export const PaginationArrow: React.FC<PaginationArrowProps> = ({
   direction,
   href,
-  disabled,
+  isDisabled = false,
 }) => {
-  const content = direction === "left" ? "<" : ">";
+  const content =
+    direction === "left" ? (
+      <ChevronIcon className={styles.left} />
+    ) : (
+      <ChevronIcon className={styles.right} />
+    );
 
-  if (disabled) {
+  if (isDisabled) {
     return (
       <div className={`${styles.paginationArrow} ${styles.disabled}`}>
         {content}
