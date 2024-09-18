@@ -29,7 +29,6 @@ export default async function Home({
   return (
     <>
       <Container>
-        <h2 className="text-1">TechProducts</h2>
         <Suspense
           key={currentPage + sortBy + filterBy}
           fallback={<div>Loading...</div>}

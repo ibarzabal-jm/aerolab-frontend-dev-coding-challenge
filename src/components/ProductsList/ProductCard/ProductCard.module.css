@@ -23,8 +23,19 @@
 
 .name {
   color: var(--neutral-900);
+  composes: mobile-text-1 from "@/app/fonts.module.css";
 }
 
 .category {
   color: var(--neutral-600);
+  composes: mobile-text-2-caps from "@/app/fonts.module.css";
+}
+
+@media (min-width: 768px) {
+  .name {
+    composes: desktop-text-1 from "@/app/fonts.module.css";
+  }
+  .category {
+    composes: desktop-text-2-caps from "@/app/fonts.module.css";
+  }
 }

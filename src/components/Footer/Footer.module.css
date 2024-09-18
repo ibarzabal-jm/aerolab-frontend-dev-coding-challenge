@@ -3,6 +3,7 @@
   color: var(--neutral-600);
   padding: 80px;
   text-align: center;
+  composes: desktop-text-1 from "@/app/fonts.module.css";
 }
 
 @media (min-width: 768px) {

@@ -1,3 +1,10 @@
 .productsShowed {
   color: var(--neutral-600);
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+}
+
+@media (min-width: 1024px) {
+  .productsShowed {
+    composes: desktop-text-1 from "@/app/fonts.module.css";
+  }
 }

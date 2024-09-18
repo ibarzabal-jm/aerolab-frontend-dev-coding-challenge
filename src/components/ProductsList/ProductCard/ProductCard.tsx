@@ -19,8 +19,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
       </div>
       <div className={styles.description}>
-        <h3 className={`${styles.name} text-1`}>{product.name}</h3>
-        <p className={`${styles.category} text-2-caps`}>{product.category}</p>
+        <h3 className={styles.name}>{product.name}</h3>
+        <p className={styles.category}>{product.category}</p>
       </div>
     </div>
   );

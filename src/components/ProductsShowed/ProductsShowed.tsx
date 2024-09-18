@@ -13,7 +13,7 @@ export const ProductsShowed = ({
   totalProducts,
 }: ProductsShowedProps) => {
   return (
-    <p className={`${styles.productsShowed} text-1`}>
+    <p className={styles.productsShowed}>
       <span className="text-brand">
         {Math.min(currentPage * pageSize, totalProducts)} of {totalProducts}
       </span>{" "}

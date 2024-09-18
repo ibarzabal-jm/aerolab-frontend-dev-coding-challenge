@@ -26,7 +26,7 @@ export const Pagination = ({ currentPage, totalPages }: PaginationProps) => {
         href={createPageUrl(currentPage - 1)}
         disabled={currentPage === 1}
       />
-      <p className={`${styles.pageInfo} text-1`}>
+      <p className={styles.pageInfo}>
         Page{" "}
         <span className="text-brand">
           {currentPage} of {totalPages}
