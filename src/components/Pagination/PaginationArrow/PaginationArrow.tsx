@@ -13,12 +13,11 @@ export const PaginationArrow: React.FC<PaginationArrowProps> = ({
   href,
   isDisabled = false,
 }) => {
-  const content =
-    direction === "left" ? (
-      <ChevronIcon className={styles.left} />
-    ) : (
-      <ChevronIcon className={styles.right} />
-    );
+  const content = (
+    <ChevronIcon
+      className={`${styles.icon} ${direction === "left" ? styles.left : ""}`}
+    />
+  );
 
   if (isDisabled) {
     return (

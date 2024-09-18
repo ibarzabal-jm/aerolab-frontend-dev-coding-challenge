@@ -3,21 +3,24 @@
   align-items: center;
   justify-content: center;
 
-  padding: 8px;
   border-radius: 8px;
+
+  width: 36px;
+  height: 36px;
 
   color: var(--neutral-500);
   background-color: var(--brand-light);
 
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-
-  & svg {
-    font-size: 20px;
-  }
 }
 
-.left {
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon.left {
   transform: rotate(180deg);
 }
 
@@ -33,9 +36,14 @@
   cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   .paginationArrow {
     height: 40px;
     width: 40px;
+  }
+
+  .icon {
+    height: 24px;
+    width: 24px;
   }
 }

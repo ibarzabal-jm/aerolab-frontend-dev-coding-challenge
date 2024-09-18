@@ -33,9 +33,13 @@
 
 @media (min-width: 768px) {
   .name {
-    composes: desktop-text-1 from "@/app/fonts.module.css";
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0;
   }
   .category {
-    composes: desktop-text-2-caps from "@/app/fonts.module.css";
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
   }
 }
