@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container/Container";
+import { LandingSection } from "@/components/LandingSection/LandingSection";
 import { Pagination } from "@/components/Pagination/Pagination";
 import { PaginationBottom } from "@/components/PaginationBottom/PaginationBottom";
 import { ProductsList } from "@/components/ProductsList/ProductsList";
@@ -28,6 +29,7 @@ export default async function Home({
 
   return (
     <>
+      <LandingSection />
       <Container>
         <Suspense
           key={currentPage + sortBy + filterBy}

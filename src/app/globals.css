@@ -23,6 +23,21 @@
   --red-light: #ffdfd9;
 
   --font-montserrat: var(--font-montserrat), -apple-system, sans-serif;
+
+  --gradient-bg: linear-gradient(
+    102.47deg,
+    #7296eb -5.34%,
+    #eac0e9 106.58%,
+    #eac0e9 106.58%
+  );
+
+  --gradient-bg-opacity: linear-gradient(
+    102.47deg,
+    rgba(23, 111, 235, 0.5) -5.34%,
+    rgba(255, 128, 255, 0.5) 106.58%
+  );
+
+  --aerolab: linear-gradient(180deg, #ff8800 0%, #ff6600 100%);
 }
 
 html,
