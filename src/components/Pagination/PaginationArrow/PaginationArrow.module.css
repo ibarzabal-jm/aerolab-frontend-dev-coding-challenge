@@ -1,0 +1,15 @@
+.paginationArrow {
+  padding: 8px 16px;
+  color: var(--neutral-600);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.paginationArrow:not(.disabled):hover {
+  color: var(--neutral-900);
+}
+
+.paginationArrow.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

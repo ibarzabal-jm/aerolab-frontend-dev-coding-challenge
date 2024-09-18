@@ -1,0 +1,31 @@
+.paginationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--neutral-300);
+  border-radius: 16px;
+  padding: 12px 16px;
+  gap: 16px;
+}
+
+.pageInfo {
+  color: var(--neutral-600);
+}
+
+@media (min-width: 768px) {
+  .paginationContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .paginationContainer::before {
+    content: "";
+  }
+}

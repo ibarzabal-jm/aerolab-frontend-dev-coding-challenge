@@ -1,0 +1,26 @@
+.paginationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  --min-width-pagination: 240px;
+}
+
+.pagination {
+  min-width: var(--min-width-pagination);
+}
+
+@media (min-width: 1024px) {
+  .paginationContainer {
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    align-items: center;
+
+    --min-width-pagination: 259px;
+  }
+
+  .paginationContainer::after {
+    content: "";
+    min-width: var(--min-width-pagination);
+  }
+}
