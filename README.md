@@ -1,16 +1,17 @@
-![Aerolab's Frontend Developer coding challenge](assets/github-cover-aerolab-frontend-developer-coding-challenge.png)
+![Aerolab's Frontend Developer coding challenge](src/assets/github-cover-aerolab-frontend-developer-coding-challenge.png)
+
 # Aerolab Frontend Developer coding challenge
 
 The challenge is to build a catalog view for a loyalty program app. We’ll provide you with the base UI and API, you can use it as provided or you can make any improvements you deem fit. It’s up to you, your imagination and your skills to come up with new solutions and/or interactions between the components.
 
 Remember that the product’s main goal is to help users redeem items through a points-based system. We expect your end-product to be both visually attractive and functionally effective.
 
-* [Acceptance Criteria](#Acceptance-Criteria)
-* [Tech Stack](#Tech-Stack)
-* [Design resources](#Design-resources)
-* [API Documentation](#API-Documentation)
-* [Delivery](#Delivery)
-* [Aerolab career opportunities](#Aerolab-careers-opportunities)
+- [Acceptance Criteria](#Acceptance-Criteria)
+- [Tech Stack](#Tech-Stack)
+- [Design resources](#Design-resources)
+- [API Documentation](#API-Documentation)
+- [Delivery](#Delivery)
+- [Aerolab career opportunities](#Aerolab-careers-opportunities)
 
 ## Acceptance Criteria
 
@@ -37,10 +38,9 @@ Feel free to reach one of the following levels of quality based on your skills. 
 - When the user clicks on the Redeem now button, the system should automatically deduct the item’s price from the users’ points.
 - The user should be able add points to their account
 
-
 ### Level 2 - Eye Candy 💅
 
-- *All of above*
+- _All of above_
 - Make a mobile responsive version
 - The "view all products" button (on Hero/Header section) should scroll view to listed products
 - Make the "Browse, Choose, Enjoy" section
@@ -51,7 +51,7 @@ Feel free to reach one of the following levels of quality based on your skills. 
 
 ### Level 3 - Mind-blowing 🤯
 
-- *All of above*
+- _All of above_
 - Make a tablet responsive version
 - Make some visual tweaks (animations, micro interactions, etc)
 - Put all your effort on website performance (images, web vitals, network optimization, etc)
@@ -75,12 +75,12 @@ We recommend that you use the following technologies, which are aligned with the
 
 ### Optionally
 
-- *Typescript (data types)*
-- *Jest + React Testing Library (testing)*
+- _Typescript (data types)_
+- _Jest + React Testing Library (testing)_
 
 > 😎 You can use any additional library you need to carry out the challenge.
 
-> 👍 BTW, we can be flexible if you feel comfortable with any other technology or if you want to combine them in different ways. You can use other stack like *CRA, VueJS, NuxtJS, Remix, Svelte, Angular, React Native, Flutter, Heroku, Digital Ocean, Stitches CSS, Styled JSX, SASS, CSS Modules,* etc...
+> 👍 BTW, we can be flexible if you feel comfortable with any other technology or if you want to combine them in different ways. You can use other stack like _CRA, VueJS, NuxtJS, Remix, Svelte, Angular, React Native, Flutter, Heroku, Digital Ocean, Stitches CSS, Styled JSX, SASS, CSS Modules,_ etc...
 
 ## Design resources
 
@@ -89,6 +89,7 @@ We've crafted a beautiful design for this coding challenge. We provide your a Fi
 - [Figma design here](https://www.figma.com/file/3O7BxHFnSSawJeny3lXWkE)
 
 ## API Documentation
+
 - Read our [API Documentation](https://aerolabchallenge.docs.apiary.io/)
 - [Claim your API token](https://aerolab.co/coding-challenge) and have access to endpoints (type `join` and write your **email**. Then you'll receive some details and the API token)
 
