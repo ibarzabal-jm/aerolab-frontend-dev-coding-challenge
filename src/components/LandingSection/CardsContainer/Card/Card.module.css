@@ -1,0 +1,80 @@
+.card {
+  aspect-ratio: 335 / 400;
+  border-radius: 32px;
+  background-color: #ffffffb2;
+  border: 1px solid var(--neutral-300);
+  overflow: hidden;
+  padding: 12px;
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 24px;
+  background-color: var(--neutral-0);
+  border: 1px solid var(--neutral-300);
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  background-image: var(--gradient-bg-opacity);
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 245px;
+  align-items: center;
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.contentContainer {
+  padding: 16px 24px 24px;
+  flex: 0 1 140px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.title {
+  composes: mobile-header-3 from "@/app/fonts.module.css";
+  text-transform: uppercase;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--brand-light);
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+.description {
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+  color: var(--neutral-600);
+}
+
+@media (min-width: 768px) {
+  .card {
+    aspect-ratio: unset;
+  }
+  .imageContainer {
+    min-height: 290px;
+  }
+  .contentContainer {
+    flex: 0 1 100%;
+  }
+}

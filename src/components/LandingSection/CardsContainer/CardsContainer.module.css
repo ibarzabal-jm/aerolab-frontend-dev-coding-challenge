@@ -1,0 +1,12 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}

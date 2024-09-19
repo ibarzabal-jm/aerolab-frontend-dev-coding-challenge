@@ -3,6 +3,7 @@ import { Container } from "../Container/Container";
 import styles from "./LandingSection.module.css";
 import { LandingText } from "./LandingText/LandingText";
 import { DesktopIllustration } from "./DesktopIllustration/DesktopIllustration";
+import { CardsContainer } from "./CardsContainer/CardsContainer";
 
 export const LandingSection = () => {
   return (
@@ -14,7 +15,9 @@ export const LandingSection = () => {
         </div>
       </Container>
 
-      <Container className={styles.sectionGradient}>hola</Container>
+      <Container className={styles.sectionGradient}>
+        <CardsContainer />
+      </Container>
     </div>
   );
 };
