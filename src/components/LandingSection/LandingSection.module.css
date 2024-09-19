@@ -1,4 +1,4 @@
-.landingSection {
+.landingBackground {
   background-repeat: repeat;
   background-position: center -108px;
   background-image: url("/wave.svg");
@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 32px;
 }
 
 .landingText {
@@ -21,7 +22,7 @@
 }
 
 @media (min-width: 1280px) {
-  .landingSection {
+  .landingBackground {
     margin-top: 80px;
   }
   .landingContent {
@@ -30,5 +31,10 @@
   }
   .landingText {
     text-align: left;
+  }
+
+  .sectionGradient {
+    margin-top: 118px;
+    height: 528px;
   }
 }

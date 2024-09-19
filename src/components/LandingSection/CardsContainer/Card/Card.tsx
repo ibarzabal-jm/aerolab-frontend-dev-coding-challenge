@@ -21,12 +21,16 @@ export const Card: React.FC<CardProps> = ({
     <article className={styles.card}>
       <div className={styles.cardInner}>
         <div className={styles.imageContainer}>
-          <Image
-            fill
-            src={mobileImage}
-            alt={title}
-            style={{ objectFit: "contain" }}
-          />
+          <picture>
+            <source srcSet={mobileImage} media="(max-width: 1023px)" />
+            <source srcSet={desktopImage} media="(min-width: 1024px)" />
+            <Image
+              fill
+              src={mobileImage}
+              alt={title + " image"}
+              style={{ objectFit: "contain" }}
+            />
+          </picture>
         </div>
         <div className={styles.contentContainer}>
           <header className={styles.header}>

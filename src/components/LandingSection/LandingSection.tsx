@@ -7,7 +7,7 @@ import { CardsContainer } from "./CardsContainer/CardsContainer";
 
 export const LandingSection = () => {
   return (
-    <div className={styles.landingSection}>
+    <div className={styles.landingBackground}>
       <Container>
         <div className={styles.landingContent}>
           <LandingText />

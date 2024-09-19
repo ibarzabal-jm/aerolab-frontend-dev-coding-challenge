@@ -2,11 +2,40 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+  justify-items: center;
 }
 
 @media (min-width: 768px) {
   .cardsContainer {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cardsContainer {
+    gap: 0;
+    justify-items: unset;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .cardsContainer > *:first-child {
+    transform: rotate(-3deg);
+    top: -80px;
+    left: 17px;
+  }
+  .cardsContainer > *:nth-child(2) {
+    top: -106px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .cardsContainer > *:last-child {
+    transform: rotate(3deg);
+    top: -80px;
+    right: 17px;
   }
 }
