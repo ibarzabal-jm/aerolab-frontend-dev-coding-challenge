@@ -11,7 +11,7 @@
   }
 }
 
-@media screen and (min-width: 1204px) {
+@media screen and (min-width: 1024px) {
   .productsList {
     grid-template-columns: repeat(3, 1fr);
     gap: 48px 24px;

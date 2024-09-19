@@ -26,6 +26,7 @@
   }
   .landingContent {
     justify-content: space-between;
+    gap: 30px;
   }
   .landingText {
     text-align: left;

@@ -2,7 +2,7 @@
   font-family: var(--font-montserrat);
   font-size: 96px;
   font-weight: 900;
-  line-height: 76mobile-8px;
+  line-height: 76.8px;
   letter-spacing: 0;
 }
 
@@ -10,7 +10,7 @@
   font-family: var(--font-montserrat);
   font-size: 32px;
   font-weight: 900;
-  line-height: 25mobile-6px;
+  line-height: 80%;
   letter-spacing: 0;
 }
 
@@ -35,7 +35,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0.024em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
@@ -103,7 +103,7 @@
 
   font-size: 18px;
   line-height: 27px;
-  letter-spacing: 0.024em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 

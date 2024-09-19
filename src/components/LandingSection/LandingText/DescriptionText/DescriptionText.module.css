@@ -1,0 +1,13 @@
+.description {
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+  color: var(--neutral-600);
+  margin-top: 24px;
+}
+
+@media (min-width: 1024px) {
+  .description {
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 523px;
+  }
+}

@@ -1,0 +1,16 @@
+.landingTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-transform: uppercase;
+  color: var(--neutral-900);
+  composes: mobile-header-1 from "@/app/fonts.module.css";
+  margin-top: 8px;
+}
+
+@media (min-width: 1280px) {
+  .landingTitle {
+    font-size: 200px;
+    line-height: 160px;
+  }
+}

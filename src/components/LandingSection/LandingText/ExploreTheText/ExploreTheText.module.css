@@ -1,0 +1,11 @@
+.text {
+  composes: mobile-text-1-caps from "@/app/fonts.module.css";
+}
+
+@media (min-width: 1280px) {
+  .text {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.24em;
+  }
+}
