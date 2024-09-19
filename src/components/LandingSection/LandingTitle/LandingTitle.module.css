@@ -1,0 +1,8 @@
+.landingTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-transform: uppercase;
+  color: var(--neutral-900);
+  composes: desktop-header-1 from "@/app/fonts.module.css";
+}

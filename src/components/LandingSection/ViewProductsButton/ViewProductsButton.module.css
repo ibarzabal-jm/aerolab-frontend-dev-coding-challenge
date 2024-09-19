@@ -1,0 +1,44 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--neutral-0);
+
+  padding: 20px 48px;
+
+  border-radius: 24px;
+  background-image: var(--brand);
+
+  margin-top: 40px;
+}
+
+.text {
+  white-space: nowrap;
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+}
+
+.icon {
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 1280px) {
+  .button {
+    padding: 24px 40px;
+    width: min-content;
+
+    margin-top: 64px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}

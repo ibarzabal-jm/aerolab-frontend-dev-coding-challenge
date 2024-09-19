@@ -1,0 +1,32 @@
+.illustrationContainer {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .illustrationContainer {
+    --offset: 125px;
+    padding-top: var(--offset);
+    margin-top: calc(var(--offset) * -1);
+    border-radius: 104px;
+    position: relative;
+    height: 680px;
+
+    overflow: hidden;
+    display: block;
+    flex: 0 0 722px;
+  }
+
+  .illustration {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .illustrationGradient {
+    background-image: var(--gradient-bg-opacity);
+    width: 100%;
+    height: 600px;
+    border-radius: 104px;
+  }
+}

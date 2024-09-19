@@ -8,7 +8,7 @@
 
 .imageContainer {
   width: 100%;
-  padding: 64px 34px 77px;
+  height: 354px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +32,12 @@
 }
 
 @media (min-width: 768px) {
+  .imageContainer {
+    height: 345px;
+  }
+}
+
+@media (min-width: 1024px) {
   .name {
     font-size: 18px;
     line-height: 27px;
@@ -41,5 +47,11 @@
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.05em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .imageContainer {
+    height: 344px;
   }
 }
