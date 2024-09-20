@@ -3,12 +3,13 @@
   grid-template-columns: 1fr;
   gap: 24px;
   justify-items: center;
+  padding-block-end: 32px;
 }
 
 @media (min-width: 768px) {
   .cardsContainer {
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: clamp(0px, 1%, 8px);
   }
 }
 
@@ -16,10 +17,9 @@
   .cardsContainer {
     gap: 0;
     justify-items: unset;
-    background-color: red;
     height: 100%;
     width: 100%;
-    position: relative;
+    padding-block-end: 0;
   }
 
   .cardsContainer > *:first-child {
