@@ -1,6 +1,7 @@
 .landingBackground {
   background-repeat: repeat;
-  background-position: center -108px;
+  background-position: center -114px;
+  background-size: 24%;
   background-image: url("/wave.svg");
 }
 

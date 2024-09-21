@@ -1,13 +1,13 @@
 .mobileIllustration {
   position: absolute;
-  top: -114px;
+  top: -489px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 @media (min-width: 768px) {
   .mobileIllustration {
-    top: -314px;
+    top: -461px;
   }
 }
 
