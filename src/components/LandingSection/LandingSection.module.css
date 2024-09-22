@@ -24,6 +24,7 @@
 .sectionGradient {
   background-image: var(--gradient-bg-opacity);
   padding-block-start: 375px;
+  margin-block-end: 80px;
 }
 
 .sectionGradientContent {
@@ -36,6 +37,7 @@
   }
   .sectionGradient {
     padding-block-start: 147px;
+    margin-block-end: 160px;
   }
 }
 
@@ -53,7 +55,7 @@
   }
 
   .sectionGradient {
-    margin-block: 150px 75px;
+    margin-block: 150px calc(75px + 160px);
     height: 528px;
     padding-block-start: 0;
   }
