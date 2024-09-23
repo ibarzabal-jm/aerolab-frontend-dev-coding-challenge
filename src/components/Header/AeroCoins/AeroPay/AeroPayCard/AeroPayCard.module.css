@@ -1,0 +1,50 @@
+.aeroCard {
+  background: var(--neutral-900);
+  color: var(--neutral-100);
+  padding: 16px;
+  border-radius: 16px;
+
+  background-image: url("/wave-pattern-card.svg");
+  background-position: center 0px;
+}
+
+.aeroCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 68px;
+
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+}
+
+.aeroCardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerText {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 1024px) {
+  .aeroCardHeader {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .footerText {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

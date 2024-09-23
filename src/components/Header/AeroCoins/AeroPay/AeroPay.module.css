@@ -1,0 +1,75 @@
+.aeroCoinsDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border: 1px solid var(--neutral-300);
+  border-radius: 16px;
+  width: 312px;
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.aeroCoinsDropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.aeroCoinsDropdown.closed {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+}
+
+.aeroDropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  color: var(--neutral-900);
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.aeroDropdownTitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.aeroDropdownContainer {
+  padding: 24px;
+}
+
+.amountOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  margin-block: 40px 24px;
+}
+
+.amountOptions button {
+  flex: 1;
+}
+
+.addPointsButton {
+  width: 100%;
+  padding: 12px 16px;
+}
+
+.iconPointButton {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 1024px) {
+  .aeroDropdownTitle {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .iconPointButton {
+    width: 24px;
+    height: 24px;
+  }
+}
