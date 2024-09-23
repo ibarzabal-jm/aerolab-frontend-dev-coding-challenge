@@ -1,6 +1,7 @@
-.landingSection {
+.landingBackground {
   background-repeat: repeat;
-  background-position: center -108px;
+  background-position: center -114px;
+  background-size: 24%;
   background-image: url("/wave.svg");
 }
 
@@ -9,6 +10,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 32px;
+
+  padding-block: 30px 80px;
+  margin-block: 10px 32px;
 }
 
 .landingText {
@@ -18,17 +23,40 @@
 
 .sectionGradient {
   background-image: var(--gradient-bg-opacity);
+  padding-block-start: 375px;
+  margin-block-end: 80px;
+}
+
+.sectionGradientContent {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .landingContent {
+    margin-block: 32px 259px;
+  }
+  .sectionGradient {
+    padding-block-start: 147px;
+    margin-block-end: 160px;
+  }
 }
 
 @media (min-width: 1280px) {
-  .landingSection {
-    margin-top: 80px;
+  .landingBackground {
+    margin-block-start: 80px;
   }
   .landingContent {
     justify-content: space-between;
     gap: 30px;
+    margin-block: 10px 32px;
   }
   .landingText {
     text-align: left;
+  }
+
+  .sectionGradient {
+    margin-block: 150px calc(75px + 160px);
+    height: 528px;
+    padding-block-start: 0;
   }
 }

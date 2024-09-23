@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 20px;
+  padding-inline: 20px;
 }
 
 .inner {
@@ -10,7 +10,7 @@
 
 @media (min-width: 1440px) {
   .container {
-    padding: 20px 80px;
+    padding-inline: 80px;
   }
   .inner {
     max-width: 1464px;

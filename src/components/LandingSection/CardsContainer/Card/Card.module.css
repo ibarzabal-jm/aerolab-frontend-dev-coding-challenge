@@ -1,0 +1,117 @@
+.card {
+  border-radius: 32px;
+  background-color: #ffffffb2;
+  border: 1px solid var(--neutral-300);
+  overflow: hidden;
+  padding: 12px;
+
+  height: 408px;
+  max-width: 335px;
+  z-index: 2;
+  box-shadow: 0px 2px 40px 0px #0000000d;
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 24px;
+  background-color: var(--neutral-0);
+  border: 1px solid var(--neutral-300);
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  background-image: var(--gradient-bg-opacity);
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  max-height: 245px;
+  flex: 1 1 245px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.contentContainer {
+  padding: 16px 24px 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.title {
+  composes: mobile-header-3 from "@/app/fonts.module.css";
+  text-transform: uppercase;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--brand-light);
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+.description {
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+  color: var(--neutral-600);
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: unset;
+    width: 100%;
+  }
+  .imageContainer {
+    max-height: unset;
+    flex: 1 1 290px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    position: absolute;
+    width: 36.34%;
+    max-width: unset;
+    height: 676px;
+    max-height: 676px;
+    background-color: white;
+  }
+  .imageContainer {
+    flex: 0 0 498px;
+    max-height: unset;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .description {
+    font-size: 18px;
+    line-height: 27px;
+
+    width: 372px;
+  }
+}
