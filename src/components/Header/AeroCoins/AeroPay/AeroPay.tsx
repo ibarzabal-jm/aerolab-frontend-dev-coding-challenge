@@ -1,5 +1,5 @@
 "use-client";
-import { User } from "@/services/types";
+import { PossibleAmountOfPoints, User } from "@/services/types";
 import { forwardRef, useState, useTransition } from "react";
 import { AeroPayCard } from "./AeroPayCard/AeroPayCard";
 import AeroPayIcon from "@/assets/icons/aeropay-3.svg";
@@ -8,7 +8,7 @@ import styles from "./AeroPay.module.css";
 import { Button } from "@/components/Button/Button";
 
 import { addPoints } from "@/app/actions";
-
+import { RadioButton } from "@/components/RadioButton/RadioButton";
 interface AeroPayProps {
   user: User;
   isOpen: boolean;
@@ -16,10 +16,17 @@ interface AeroPayProps {
 
 export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
   ({ user, isOpen }: AeroPayProps, ref) => {
-    const [selectedAmount, setSelectedAmount] = useState<1000 | 5000 | 7500>(
-      1000
-    );
-    let [isPending, startTransition] = useTransition();
+    const [isPending, startTransition] = useTransition();
+
+    const [selectedAmount, setSelectedAmount] =
+      useState<PossibleAmountOfPoints>(PossibleAmountOfPoints.ONE_THOUSAND);
+
+    const handleChangeRadioButton = (
+      event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+      const number = event.target.value as PossibleAmountOfPoints;
+      setSelectedAmount(number);
+    };
 
     const handleAddPoints = async () => {
       startTransition(() => {
@@ -40,16 +47,21 @@ export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
         <div className={styles.aeroDropdownContainer}>
           <AeroPayCard user={user} />
 
-          <div className={styles.amountOptions}>
-            <Button size="sm" onClick={() => setSelectedAmount(1000)}>
-              1000
-            </Button>
-            <Button size="sm" onClick={() => setSelectedAmount(5000)}>
-              5000
-            </Button>
-            <Button size="sm" onClick={() => setSelectedAmount(7500)}>
-              7500
-            </Button>
+          <div
+            className={styles.amountOptions}
+            onChange={handleChangeRadioButton}
+          >
+            {Object.values(PossibleAmountOfPoints).map((amount) => (
+              <RadioButton
+                key={amount}
+                name={amount}
+                value={amount}
+                checked={selectedAmount === amount}
+                onChange={handleChangeRadioButton}
+              >
+                {amount}
+              </RadioButton>
+            ))}
           </div>
 
           <Button

@@ -3,6 +3,7 @@ import {
   AddPointsResponse,
   Filter,
   GetPageFilters,
+  PossibleAmountOfPoints,
   Product,
   ProductList,
   RedeemHistory,
@@ -48,13 +49,13 @@ export class RedeemService {
   }
 
   public static async addPoints(
-    amount: 1000 | 5000 | 7500
+    amount: PossibleAmountOfPoints
   ): Promise<AddPointsResponse> {
     try {
       console.log(`[RedeemService] addPoints`);
       return await this.apiClient<AddPointsResponse>("/user/points", {
         method: "POST",
-        body: JSON.stringify({ amount }),
+        body: JSON.stringify({ amount: Number(amount) }),
       });
     } catch (error) {
       console.error(

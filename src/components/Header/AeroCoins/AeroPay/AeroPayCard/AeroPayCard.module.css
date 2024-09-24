@@ -6,6 +6,8 @@
 
   background-image: url("/wave-pattern-card.svg");
   background-position: center 0px;
+
+  box-shadow: 0px 2px 8px 0px #0000000d;
 }
 
 .aeroCardHeader {

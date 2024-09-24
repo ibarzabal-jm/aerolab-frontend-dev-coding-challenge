@@ -21,6 +21,12 @@ export enum Filter {
   MONITORS_TV = "monitors_tv",
 }
 
+export enum PossibleAmountOfPoints {
+  ONE_THOUSAND = "1000",
+  FIVE_THOUSAND = "5000",
+  SEVEN_THOUSAND_FIVE_HUNDRED = "7500",
+}
+
 export interface GetPageFilters {
   page?: number;
   limit?: number;
