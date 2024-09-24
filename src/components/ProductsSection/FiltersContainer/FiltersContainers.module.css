@@ -1,0 +1,34 @@
+.filtersContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 64px;
+}
+
+.pagination {
+  display: none;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .pagination {
+    display: block;
+    min-width: 259px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .filters {
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .filtersContainer {
+    align-items: center;
+  }
+}

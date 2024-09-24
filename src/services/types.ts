@@ -14,11 +14,11 @@ export enum Sort {
 }
 
 export enum Filter {
-  ALL = "all",
-  GAMING = "gaming",
-  AUDIO = "audio",
-  SMART_HOME = "smart_home",
-  MONITORS_TV = "monitors_tv",
+  ALL = "All",
+  GAMING = "Gaming",
+  AUDIO = "Audio",
+  SMART_HOME = "Smart Home",
+  MONITORS_TV = "Monitors & TV",
 }
 
 export enum PossibleAmountOfPoints {

@@ -14,18 +14,7 @@ export const sortProducts = (products: Product[], sort: Sort) => {
 };
 
 export const filterProducts = (products: Product[], filter: Filter) => {
-  switch (filter) {
-    case Filter.AUDIO:
-      return products.filter((product) => product.category === "audio");
-    case Filter.SMART_HOME:
-      return products.filter((product) => product.category === "smart_home");
-    case Filter.MONITORS_TV:
-      return products.filter((product) => product.category === "monitors_tv");
-    case Filter.GAMING:
-      return products.filter((product) => product.category === "gaming");
-    case Filter.ALL:
-      return products;
-    default:
-      return products;
-  }
+  if (filter === Filter.ALL) return products;
+
+  return products.filter((product) => product.category === filter);
 };

@@ -9,6 +9,7 @@
 
 .pageInfo {
   color: var(--neutral-600);
+  white-space: nowrap;
   composes: mobile-text-1 from "@/app/fonts.module.css";
 }
 
