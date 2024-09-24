@@ -32,7 +32,7 @@ export default async function Home({
 
   return (
     <>
-      {/* <LandingSection /> */}
+      <LandingSection />
 
       <ProductsSection
         currentPage={currentPage}

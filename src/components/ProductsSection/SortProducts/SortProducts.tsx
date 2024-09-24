@@ -36,10 +36,11 @@ export const SortProducts = () => {
 
   return (
     <div className={styles.container}>
-      <h5 className={styles.title}>Sort By:</h5>
+      <h5 className={styles.title}>Sort by:</h5>
       {SortOptions.map((option) => (
         <Link
           key={option.value}
+          scroll={false}
           href={createSortUrl(option.value)}
           className="flex items-center gap-2"
         >

@@ -1,27 +1,12 @@
-import { Filter, Product, Sort } from "@/services/types";
+import { Product } from "@/services/types";
 import { ProductCard } from "./ProductCard/ProductCard";
 import styles from "./ProductsList.module.css";
-import { RedeemService } from "@/services";
-import { Suspense } from "react";
 
 interface ProductsListProps {
-  currentPage: number;
-  sortBy: Sort;
-  filterBy: Filter;
+  products: Product[];
 }
 
-export async function ProductsList({
-  currentPage,
-  sortBy,
-  filterBy,
-}: ProductsListProps) {
-  const { products } = await RedeemService.getProducts({
-    page: currentPage,
-    sortBy,
-    filterBy,
-  });
-
-  console.log(products);
+export async function ProductsList({ products }: ProductsListProps) {
   return (
     <ul className={styles.productsList}>
       {products.map((product) => (

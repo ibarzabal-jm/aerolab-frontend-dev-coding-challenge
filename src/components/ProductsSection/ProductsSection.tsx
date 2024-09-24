@@ -22,8 +22,14 @@ export const ProductsSection = async ({
   filterBy,
   sortBy,
 }: ProductsSectionProps) => {
+  const { products, totalPages, total } = await RedeemService.getProducts({
+    page: currentPage,
+    filterBy,
+    sortBy,
+  });
+
   return (
-    <Container>
+    <Container id="products">
       <HeaderSection />
 
       <FiltersContainer>
@@ -34,7 +40,7 @@ export const ProductsSection = async ({
           </>
         </FiltersContainer.Filters>
         <FiltersContainer.Pagination>
-          <Pagination currentPage={currentPage} totalPages={10} />
+          <Pagination currentPage={currentPage} totalPages={totalPages} />
         </FiltersContainer.Pagination>
       </FiltersContainer>
       <Suspense
@@ -43,14 +49,10 @@ export const ProductsSection = async ({
           <div style={{ background: "red", height: "40px" }}>Loading...</div>
         }
       >
-        <ProductsList
-          currentPage={currentPage}
-          filterBy={filterBy}
-          sortBy={sortBy}
-        />
+        <ProductsList products={products} />
       </Suspense>
 
-      {/* <PaginationBottom>
+      <PaginationBottom>
         <PaginationBottom.Pagination>
           <Pagination currentPage={currentPage} totalPages={totalPages} />
         </PaginationBottom.Pagination>
@@ -61,7 +63,7 @@ export const ProductsSection = async ({
             totalProducts={total}
           />
         </PaginationBottom.Information>
-      </PaginationBottom> */}
+      </PaginationBottom>
     </Container>
   );
 };
