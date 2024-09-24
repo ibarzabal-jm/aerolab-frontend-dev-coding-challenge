@@ -1,0 +1,61 @@
+.skeletonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.skeletonText {
+  background: linear-gradient(
+    to right,
+    var(--neutral-200),
+    var(--neutral-300),
+    var(--neutral-200)
+  );
+
+  background-color: var(--neutral-300);
+
+  background-size: 200% 200%;
+  border-radius: 12px;
+  animation: pulse 1s ease infinite;
+
+  & span {
+    color: transparent;
+    width: min-content;
+  }
+}
+
+.md {
+  height: 24px;
+  & .skeletonText {
+    font-size: 16px;
+  }
+}
+.sm {
+  height: 18px;
+  & .skeletonText {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .md {
+    height: 27px;
+    & .skeletonText {
+      font-size: 18px;
+    }
+  }
+  .sm {
+    height: 21px;
+    & .skeletonText {
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}

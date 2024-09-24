@@ -1,0 +1,124 @@
+.aeroCardContainer {
+  display: flex;
+  position: relative;
+
+  width: 100%;
+  height: 148px;
+  perspective: 1000px;
+}
+
+.aeroCard {
+  background: var(--neutral-900);
+  color: var(--neutral-100);
+  padding: 16px;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background-image: url("/wave-pattern-card.svg");
+
+  background-position: center 0px;
+
+  transform-style: preserve-3d;
+  animation-name: rotate3d;
+
+  position: absolute;
+  box-shadow: 0px 2px 8px 0px #0000000d;
+}
+
+.aeroCardContainer::after {
+  content: "";
+  background-image: linear-gradient(
+    -80deg,
+    hsla(0, 0%, 100%, 0.3) 25%,
+    transparent 47%
+  );
+
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  width: 200%;
+  height: 100%;
+
+  animation-name: texture;
+}
+
+.aeroCard,
+.aeroCardContainer::after {
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.aeroCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 68px;
+
+  composes: mobile-text-1 from "@/app/fonts.module.css";
+}
+
+.aeroCardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerText {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 1024px) {
+  .aeroCardHeader {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .footerText {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@keyframes rotate3d {
+  from,
+  to {
+    animation-timing-function: ease-in;
+    transform: rotateY(-10deg);
+  }
+  25%,
+  75% {
+    animation-timing-function: ease-out;
+
+    transform: rotateY(0deg);
+  }
+  50% {
+    animation-timing-function: ease-in;
+
+    transform: rotateY(10deg);
+  }
+}
+
+@keyframes texture {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
