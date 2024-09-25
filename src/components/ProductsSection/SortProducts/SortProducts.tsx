@@ -45,7 +45,7 @@ export const SortProducts = () => {
           className="flex items-center gap-2"
         >
           <RadioButton
-            checked={actualChecked === option.value}
+            defaultChecked={actualChecked === option.value}
             value={option.value}
             size="md"
             name={option.value}
