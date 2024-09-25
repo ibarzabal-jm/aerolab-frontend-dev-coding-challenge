@@ -20,18 +20,18 @@ export const Card: React.FC<CardProps> = ({
   return (
     <article className={styles.card}>
       <div className={styles.cardInner}>
-        <div className={styles.imageContainer}>
-          <picture>
-            <source srcSet={mobileImage} media="(max-width: 1023px)" />
-            <source srcSet={desktopImage} media="(min-width: 1024px)" />
-            <Image
-              fill
-              src={mobileImage}
-              alt={title + " image"}
-              style={{ objectFit: "contain" }}
-            />
-          </picture>
-        </div>
+        <picture className={styles.imageContainer}>
+          <source srcSet={mobileImage} media="(max-width: 1023px)" />
+          <source srcSet={desktopImage} media="(min-width: 1024px)" />
+          <Image
+            sizes="(max-width:1024px) 33vw, (max-width: 768px) 33vw, 307px"
+            fill
+            src={mobileImage}
+            alt={title + " image"}
+            style={{ objectFit: "contain" }}
+          />
+        </picture>
+
         <div className={styles.contentContainer}>
           <header className={styles.header}>
             <div className={styles.iconContainer}>

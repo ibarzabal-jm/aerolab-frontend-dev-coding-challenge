@@ -22,20 +22,37 @@
     padding-block-end: 0;
   }
 
+  .cardsContainer > * {
+    transition: all 0.2s ease-in-out;
+  }
+
   .cardsContainer > *:first-child {
     transform: rotate(-3deg);
     top: -80px;
     left: 17px;
   }
+
+  .cardsContainer > *:first-child:hover {
+    transform: rotate(-5deg) translateX(-30px);
+  }
+
   .cardsContainer > *:nth-child(2) {
     top: -106px;
     left: 50%;
     transform: translateX(-50%);
   }
 
+  .cardsContainer > *:nth-child(2):hover {
+    transform: translateX(-50%) translateY(-30px);
+  }
+
   .cardsContainer > *:last-child {
     transform: rotate(3deg);
     top: -80px;
     right: 17px;
+  }
+
+  .cardsContainer > *:last-child:hover {
+    transform: rotate(5deg) translateX(30px);
   }
 }
