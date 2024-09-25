@@ -29,8 +29,8 @@ export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
     };
 
     const handleAddPoints = async () => {
-      startTransition(() => {
-        addPoints(selectedAmount);
+      startTransition(async () => {
+        await addPoints(selectedAmount);
       });
     };
 

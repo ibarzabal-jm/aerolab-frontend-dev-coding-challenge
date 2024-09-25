@@ -10,6 +10,7 @@ import { HeaderSection } from "./HeaderSection/HeaderSection";
 import { FiltersContainer } from "./FiltersContainer/FiltersContainer";
 import { CategoryFilter } from "./CategoryFilter/CategoryFilter";
 import { SortProducts } from "./SortProducts/SortProducts";
+import { DesktopDivider } from "./DesktopDivider/DesktopDivider";
 
 interface ProductsSectionProps {
   currentPage: number;
@@ -36,6 +37,7 @@ export const ProductsSection = async ({
         <FiltersContainer.Filters>
           <>
             <CategoryFilter />
+            <DesktopDivider />
             <SortProducts />
           </>
         </FiltersContainer.Filters>

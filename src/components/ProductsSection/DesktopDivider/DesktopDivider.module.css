@@ -1,0 +1,12 @@
+.divider {
+  display: none;
+}
+
+@media (min-width: 1070px) {
+  .divider {
+    display: block;
+    background-color: var(--neutral-300);
+    border: none;
+    width: 2px;
+  }
+}
