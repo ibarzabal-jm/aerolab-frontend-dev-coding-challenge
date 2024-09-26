@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { login } from "@/lib/session";
+import { cookies } from "next/headers";
 
 const montserrat = Montserrat({
   weight: ["400", "600", "900"],
@@ -20,6 +22,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = cookies();
+
+  console.log(cookieStore);
+
   return (
     <html lang="en">
       <body className={`${montserrat.variable} `}>

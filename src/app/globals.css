@@ -21,6 +21,8 @@
   --red-default: #e07f4f;
   --red-light: #ffdfd9;
 
+  --shadow: #0000000d;
+
   --font-montserrat: var(--font-montserrat), -apple-system, sans-serif;
 
   --gradient-bg: linear-gradient(

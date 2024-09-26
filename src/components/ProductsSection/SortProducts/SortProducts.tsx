@@ -5,6 +5,7 @@ import { Sort } from "@/services/types";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import styles from "./SortProducts.module.css";
+import { useRouter } from "next/navigation";
 
 const SortOptions = [
   {
@@ -22,37 +23,35 @@ const SortOptions = [
 ];
 
 export const SortProducts = () => {
+  const router = useRouter();
   const path = usePathname();
   const searchParams = useSearchParams();
 
   const actualChecked = searchParams.get("sortBy") ?? Sort.ASC;
 
-  const createSortUrl = (value: Sort) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const params = new URLSearchParams(searchParams);
-    params.set("sortBy", value);
+    params.set("sortBy", event.target.value);
     params.set("page", "1");
-    return `${path}?${params.toString()}`;
+    router.push(path + "?" + params.toString(), {
+      scroll: false,
+    });
   };
 
   return (
     <div className={styles.container}>
       <h5 className={styles.title}>Sort by:</h5>
       {SortOptions.map((option) => (
-        <Link
+        <RadioButton
           key={option.value}
-          scroll={false}
-          href={createSortUrl(option.value)}
-          className="flex items-center gap-2"
+          checked={actualChecked === option.value}
+          value={option.value}
+          size="md"
+          name={option.value}
+          onChange={onChange}
         >
-          <RadioButton
-            defaultChecked={actualChecked === option.value}
-            value={option.value}
-            size="md"
-            name={option.value}
-          >
-            {option.label}
-          </RadioButton>
-        </Link>
+          {option.label}
+        </RadioButton>
       ))}
     </div>
   );
