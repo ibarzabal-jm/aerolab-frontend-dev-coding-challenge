@@ -38,7 +38,7 @@ export const ProductsSection = async ({
           <>
             <CategoryFilter currentFilter={filterBy} />
             <DesktopDivider />
-            <SortProducts />
+            <SortProducts currentSort={sortBy} />
           </>
         </FiltersContainer.Filters>
         <FiltersContainer.Pagination>

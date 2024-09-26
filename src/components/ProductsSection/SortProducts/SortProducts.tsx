@@ -22,12 +22,14 @@ const SortOptions = [
   },
 ];
 
-export const SortProducts = () => {
+interface SortProductsPorps {
+  currentSort: Sort;
+}
+
+export const SortProducts = ({ currentSort }: SortProductsPorps) => {
   const router = useRouter();
   const path = usePathname();
   const searchParams = useSearchParams();
-
-  const actualChecked = searchParams.get("sortBy") ?? Sort.ASC;
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const params = new URLSearchParams(searchParams);
@@ -44,7 +46,7 @@ export const SortProducts = () => {
       {SortOptions.map((option) => (
         <RadioButton
           key={option.value}
-          checked={actualChecked === option.value}
+          checked={currentSort === option.value}
           value={option.value}
           size="md"
           name={option.value}
