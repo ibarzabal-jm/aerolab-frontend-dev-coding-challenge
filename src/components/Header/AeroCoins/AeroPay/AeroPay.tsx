@@ -7,7 +7,7 @@ import AeroPayIcon from "@/assets/icons/aeropay-3.svg";
 import styles from "./AeroPay.module.css";
 import { Button } from "@/components/Button/Button";
 
-import { addPoints } from "@/app/actions";
+import { addPoints } from "@/lib/actions";
 import { RadioButton } from "@/components/RadioButton/RadioButton";
 interface AeroPayProps {
   user: User;
@@ -29,8 +29,8 @@ export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
     };
 
     const handleAddPoints = async () => {
-      startTransition(() => {
-        addPoints(selectedAmount);
+      startTransition(async () => {
+        await addPoints(selectedAmount);
       });
     };
 
@@ -57,6 +57,7 @@ export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
                 name={amount}
                 value={amount}
                 checked={selectedAmount === amount}
+                size="sm"
                 onChange={handleChangeRadioButton}
               >
                 {amount}

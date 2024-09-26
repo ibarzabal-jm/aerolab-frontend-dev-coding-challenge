@@ -28,7 +28,7 @@ export const PaginationArrow: React.FC<PaginationArrowProps> = ({
   }
 
   return (
-    <Link href={href || "#"} className={styles.paginationArrow}>
+    <Link href={href || "#"} scroll={false} className={styles.paginationArrow}>
       {content}
     </Link>
   );

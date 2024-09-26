@@ -1,0 +1,16 @@
+.button {
+  width: 100%;
+  margin-block-start: 16px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

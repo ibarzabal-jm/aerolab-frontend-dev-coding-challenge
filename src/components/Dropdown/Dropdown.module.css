@@ -1,0 +1,89 @@
+.dropdown {
+  width: 100%;
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 16px 8px 16px 24px;
+  background-color: var(--neutral-0);
+  border: 1px solid var(--neutral-300);
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  color: var(--neutral-600);
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.dropdownList {
+  width: 100%;
+
+  padding: 8px 0;
+  margin-top: 8px;
+  list-style-type: none;
+  background-color: #fff;
+  border: 1px solid var(--neutral-300);
+  border-radius: 8px;
+  position: absolute;
+
+  z-index: 1;
+}
+
+.option {
+  width: 100%;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: var(--neutral-600);
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.option:hover,
+.option:focus {
+  background-color: var(--neutral-100);
+  outline: none;
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: 8px;
+  color: var(--neutral-900);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .dropdown {
+    width: 256px;
+  }
+
+  .dropdownHeader,
+  .option {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

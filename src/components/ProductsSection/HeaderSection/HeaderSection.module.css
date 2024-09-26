@@ -1,0 +1,21 @@
+.header {
+  composes: mobile-header-2 from "@/app/fonts.module.css";
+  text-transform: uppercase;
+
+  margin-bottom: 40px;
+}
+
+.black {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  background-color: var(--neutral-900);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    font-size: 48px;
+    line-height: 38.4px;
+  }
+}

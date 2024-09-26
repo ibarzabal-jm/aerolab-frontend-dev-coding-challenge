@@ -1,12 +1,6 @@
-import { Container } from "@/components/Container/Container";
 import { LandingSection } from "@/components/LandingSection/LandingSection";
-import { Pagination } from "@/components/Pagination/Pagination";
-import { PaginationBottom } from "@/components/PaginationBottom/PaginationBottom";
-import { ProductsList } from "@/components/ProductsList/ProductsList";
-import { ProductsShowed } from "@/components/ProductsShowed/ProductsShowed";
-import { RedeemService } from "@/services";
+import { ProductsSection } from "@/components/ProductsSection/ProductsSection";
 import { Filter, Sort } from "@/services/types";
-import { Suspense } from "react";
 
 export default async function Home({
   searchParams,
@@ -18,39 +12,26 @@ export default async function Home({
   };
 }) {
   const currentPage = Number(searchParams?.page ?? 1);
-  const sortBy = searchParams?.sortBy as Sort;
-  const filterBy = searchParams?.filter as Filter;
 
-  const { products, total, totalPages } = await RedeemService.getProducts({
-    page: currentPage,
-    sortBy,
-    filterBy,
-  });
+  const sortBy = Object.values(Sort).includes(searchParams!.sortBy as Sort)
+    ? (searchParams.sortBy as Sort)
+    : Sort.ASC;
+
+  const filterBy = Object.values(Filter).includes(
+    searchParams!.filter as Filter
+  )
+    ? (searchParams.filter as Filter)
+    : Filter.ALL;
 
   return (
     <>
       <LandingSection />
-      <Container>
-        <Suspense
-          key={currentPage + sortBy + filterBy}
-          fallback={<div>Loading...</div>}
-        >
-          <ProductsList products={products} />
-        </Suspense>
 
-        <PaginationBottom>
-          <PaginationBottom.Pagination>
-            <Pagination currentPage={currentPage} totalPages={totalPages} />
-          </PaginationBottom.Pagination>
-          <PaginationBottom.Information>
-            <ProductsShowed
-              currentPage={currentPage}
-              pageSize={products.length}
-              totalProducts={total}
-            />
-          </PaginationBottom.Information>
-        </PaginationBottom>
-      </Container>
+      <ProductsSection
+        currentPage={currentPage}
+        sortBy={sortBy}
+        filterBy={filterBy}
+      />
     </>
   );
 }
