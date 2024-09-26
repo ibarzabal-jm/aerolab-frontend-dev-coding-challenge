@@ -1,10 +1,11 @@
 .container {
   display: flex;
   align-items: center;
-  overflow-x: "ma";
+  overflow-x: scroll;
   gap: 4px;
-
-  max-width: 100%;
+  width: 100dvw;
+  scrollbar-width: none;
+  white-space: nowrap;
 }
 
 .title {
@@ -14,17 +15,14 @@
 @media (min-width: 768px) {
   .container {
     gap: 12px;
+    width: min-content;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .title {
     display: block;
     margin-inline-end: 4px;
-
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 27px;
 
     font-size: 18px;
     font-weight: 600;

@@ -1,0 +1,29 @@
+.category {
+  margin-bottom: 24px;
+}
+
+.title {
+  display: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .category {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    display: block;
+    margin-inline-end: 12px;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+
+    color: var(--neutral-600);
+  }
+}

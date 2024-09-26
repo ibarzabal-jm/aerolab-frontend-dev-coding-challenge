@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (min-width: 1070px) {
+@media (min-width: 1440px) {
   .divider {
     display: block;
     background-color: var(--neutral-300);

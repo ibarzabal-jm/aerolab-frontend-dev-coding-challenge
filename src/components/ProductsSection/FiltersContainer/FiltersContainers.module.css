@@ -1,23 +1,29 @@
 .filtersContainer {
-  display: flex;
-  justify-content: space-between;
   margin-block-end: 64px;
+}
+
+.filters {
+  flex: 1;
 }
 
 .pagination {
   display: none;
 }
 
-.filters {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 @media (min-width: 768px) {
+  .filtersContainer {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 529px;
+  }
   .pagination {
     display: block;
-    min-width: 259px;
+    flex: 0 0 259px;
   }
 }
 
@@ -25,10 +31,7 @@
   .filters {
     flex-direction: row;
     gap: 40px;
+    flex: 1 1 1050px;
     flex-wrap: wrap;
-  }
-
-  .filtersContainer {
-    align-items: center;
   }
 }

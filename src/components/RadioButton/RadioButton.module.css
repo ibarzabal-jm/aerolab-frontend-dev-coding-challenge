@@ -13,6 +13,7 @@
   cursor: pointer;
 
   background-color: var(--brand-light);
+  /* white-space: nowrap; */
 
   transition: all 0.3s ease;
 }
