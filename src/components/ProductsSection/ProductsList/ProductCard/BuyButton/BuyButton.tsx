@@ -6,23 +6,39 @@ import React from "react";
 import { useTransition } from "react";
 import AerolabIcon from "@/assets/icons/aeropay-3.svg";
 import styles from "./BuyButton.module.css";
+import { useToast } from "@/hooks/useToast";
 
 interface BuyButtonProps {
   userPoints: number;
   productCost: number;
   productId: string;
+  productName: string;
 }
 
 export const BuyButton = ({
   userPoints,
   productCost,
   productId,
+  productName,
 }: BuyButtonProps) => {
+  const { showToast } = useToast();
   const [isPending, startTransition] = useTransition();
 
   const handleClick = async () => {
     startTransition(async () => {
-      await redeemProduct(productId);
+      try {
+        await redeemProduct(productId);
+        showToast({
+          type: "success",
+          title: productName,
+          message: "redeemed successfully",
+        });
+      } catch (error) {
+        showToast({
+          type: "error",
+          message: "There was a problem with the transaction",
+        });
+      }
     });
   };
 

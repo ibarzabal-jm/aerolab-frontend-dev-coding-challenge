@@ -33,6 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         productCost={product.cost}
         productId={product._id}
         userPoints={userPoints}
+        productName={product.name}
       />
     </div>
   );

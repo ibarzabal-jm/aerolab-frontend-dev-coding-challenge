@@ -1,0 +1,17 @@
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 12px;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .container {
+    left: 80px;
+    transform: translate(0);
+  }
+}

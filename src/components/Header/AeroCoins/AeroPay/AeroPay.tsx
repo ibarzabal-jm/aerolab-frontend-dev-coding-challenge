@@ -9,6 +9,7 @@ import { Button } from "@/components/Button/Button";
 
 import { addPoints } from "@/lib/actions";
 import { RadioButton } from "@/components/RadioButton/RadioButton";
+import { useToast } from "@/hooks/useToast";
 interface AeroPayProps {
   user: User;
   isOpen: boolean;
@@ -17,6 +18,7 @@ interface AeroPayProps {
 export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
   ({ user, isOpen }: AeroPayProps, ref) => {
     const [isPending, startTransition] = useTransition();
+    const { showToast } = useToast();
 
     const [selectedAmount, setSelectedAmount] =
       useState<PossibleAmountOfPoints>(PossibleAmountOfPoints.ONE_THOUSAND);
@@ -30,7 +32,19 @@ export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
 
     const handleAddPoints = async () => {
       startTransition(async () => {
-        await addPoints(selectedAmount);
+        try {
+          await addPoints(selectedAmount);
+          showToast({
+            type: "success",
+            title: "Points",
+            message: "added successfully. Enjoy your flight!",
+          });
+        } catch (error) {
+          showToast({
+            type: "error",
+            message: "There was a problem with the transaction",
+          });
+        }
       });
     };
 

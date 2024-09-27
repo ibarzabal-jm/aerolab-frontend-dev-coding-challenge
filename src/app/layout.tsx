@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { ToastProvider } from "@/context/ToastContext/provider";
 
 const montserrat = Montserrat({
   weight: ["400", "600", "900"],
@@ -23,9 +24,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable} `}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ToastProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ToastProvider>
       </body>
     </html>
   );
