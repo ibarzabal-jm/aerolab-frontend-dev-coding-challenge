@@ -9,6 +9,7 @@ export const DesktopIllustration = () => {
         src="/hero-desktop.png"
         alt="Illustration"
         width={897}
+        priority
         height={795}
         className={styles.illustration}
       />

@@ -8,6 +8,7 @@ export const MobileIllustration = () => {
       <Image
         src="/hero-responsive.png"
         alt="Illustration"
+        priority
         width={580}
         height={518}
       />
