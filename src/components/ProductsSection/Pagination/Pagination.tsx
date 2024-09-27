@@ -26,11 +26,9 @@ export const Pagination = ({ currentPage, totalPages }: PaginationProps) => {
         href={createPageUrl(currentPage - 1)}
         isDisabled={currentPage === 1}
       />
-      <p className={styles.pageInfo}>
-        Page{" "}
-        <span className="text-brand">
-          {currentPage} of {totalPages}
-        </span>
+      <p className={styles.pageInfo + " text-brand"}>
+        <span className={styles.span}>Page </span>
+        {currentPage} of {totalPages}
       </p>
       <PaginationArrow
         direction="right"

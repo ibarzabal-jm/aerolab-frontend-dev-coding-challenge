@@ -3,6 +3,11 @@
   composes: mobile-text-1 from "@/app/fonts.module.css";
 }
 
+.span {
+  -webkit-text-fill-color: var(--neutral-600);
+  color: var(--neutral-600);
+}
+
 @media (min-width: 1024px) {
   .productsShowed {
     font-size: 18px;
