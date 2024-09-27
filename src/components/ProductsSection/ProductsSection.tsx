@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Container } from "../Container/Container";
 import { Pagination } from "./Pagination/Pagination";
 import { PaginationBottom } from "./PaginationBottom/PaginationBottom";
-import { ProductsShowed } from "../ProductsShowed/ProductsShowed";
+import { ProductsShowed } from "./ProductsShowed/ProductsShowed";
 import { RedeemService } from "../../services/index";
 import { Filter, Sort } from "@/services/types";
 import { ProductsList } from "./ProductsList/ProductsList";
@@ -11,6 +11,8 @@ import { FiltersContainer } from "./FiltersContainer/FiltersContainer";
 import { CategoryFilter } from "./CategoryFilter/CategoryFilter";
 import { SortProducts } from "./SortProducts/SortProducts";
 import { DesktopDivider } from "./DesktopDivider/DesktopDivider";
+
+import styles from "./ProductsSection.module.css";
 
 interface ProductsSectionProps {
   currentPage: number;
@@ -30,7 +32,7 @@ export const ProductsSection = async ({
   });
 
   return (
-    <Container id="products">
+    <Container id="products" className={styles.section}>
       <HeaderSection />
 
       <FiltersContainer>
