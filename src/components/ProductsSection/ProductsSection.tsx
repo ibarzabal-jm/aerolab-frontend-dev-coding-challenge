@@ -13,6 +13,7 @@ import { SortProducts } from "./SortProducts/SortProducts";
 import { DesktopDivider } from "./DesktopDivider/DesktopDivider";
 
 import styles from "./ProductsSection.module.css";
+import { ProductsListSkeleton } from "./ProductsList/ProductsListSkeleton/ProductsListSkeleton";
 
 interface ProductsSectionProps {
   currentPage: number;
@@ -49,9 +50,7 @@ export const ProductsSection = async ({
       </FiltersContainer>
       <Suspense
         key={currentPage + sortBy + filterBy}
-        fallback={
-          <div style={{ background: "red", height: "40px" }}>Loading...</div>
-        }
+        fallback={<ProductsListSkeleton />}
       >
         <ProductsList products={products} />
       </Suspense>

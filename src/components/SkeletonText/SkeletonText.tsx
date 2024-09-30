@@ -11,7 +11,9 @@ export const SkeletonText = ({
 }: SkeletonTextProps) => {
   return (
     <div
-      className={`${styles.skeletonContainer} ${text ? styles.md : styles.sm}`}
+      className={`${styles.skeletonContainer} ${
+        text === "md" ? styles.md : styles.sm
+      }`}
     >
       <div className={styles.skeletonText} style={{ width }}>
         <span>Loading...</span>

@@ -1,0 +1,44 @@
+.icon {
+  width: 96px;
+  height: 96px;
+}
+
+.icon path {
+  fill: var(--neutral-300);
+}
+
+.buttonSkeleton {
+  height: 56px;
+  width: 100%;
+
+  border-radius: 16px;
+  margin-block-start: 16px;
+
+  background: linear-gradient(
+    to right,
+    var(--neutral-200),
+    var(--neutral-300),
+    var(--neutral-200)
+  );
+
+  overflow: hidden;
+
+  background-color: var(--neutral-300);
+  background-size: 200% 200%;
+  animation: pulse 1s ease infinite 0.3s;
+}
+
+@media (min-width: 768px) {
+  .buttonSkeleton {
+    height: 59px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}

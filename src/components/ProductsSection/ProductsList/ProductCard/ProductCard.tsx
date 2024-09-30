@@ -17,7 +17,7 @@ export const ProductCard: React.FC<ProductCardProps> = async ({
   const { base64 } = await getImage(product.img.hdUrl);
 
   return (
-    <div>
+    <div className={styles.cardContainer}>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <picture>
