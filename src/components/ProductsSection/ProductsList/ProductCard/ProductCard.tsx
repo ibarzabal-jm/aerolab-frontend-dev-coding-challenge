@@ -44,7 +44,7 @@ export const ProductCard: React.FC<ProductCardProps> = async ({
           <picture>
             <source media="(min-width: 1024px)" srcSet={desktop} />
             <source media="(min-width: 500px)" srcSet={mobile} />
-            <img {...rest} />
+            <img alt={product.name} {...rest} />
           </picture>
         </div>
         <div className={styles.description}>
