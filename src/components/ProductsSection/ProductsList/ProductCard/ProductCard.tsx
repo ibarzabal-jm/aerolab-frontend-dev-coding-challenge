@@ -1,4 +1,4 @@
-import Image, { getImageProps } from "next/image";
+import Image from "next/image";
 import styles from "./ProductCard.module.css";
 import { Product } from "@/services/types";
 import { BuyButton } from "./BuyButton/BuyButton";
@@ -16,35 +16,20 @@ export const ProductCard: React.FC<ProductCardProps> = async ({
 }) => {
   const { base64 } = await getImage(product.img.hdUrl);
 
-  const common = {
-    alt: product.name,
-    width: 280,
-    height: 204,
-    blurDataURL: base64,
-  };
-  const {
-    props: { srcSet: desktop },
-  } = getImageProps({
-    ...common,
-    placeholder: "blur",
-    src: product.img.hdUrl,
-  });
-  const {
-    props: { srcSet: mobile, ...rest },
-  } = getImageProps({
-    ...common,
-    placeholder: "blur",
-    src: product.img.url,
-  });
-
   return (
     <div>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <picture>
-            <source media="(min-width: 1024px)" srcSet={desktop} />
-            <source media="(min-width: 500px)" srcSet={mobile} />
-            <img alt={product.name} {...rest} />
+            <source media="(min-width: 1240px)" srcSet={product.img.hdUrl} />
+            <Image
+              src={product.img.url}
+              alt={product.name}
+              width={280}
+              height={204}
+              placeholder="blur"
+              blurDataURL={base64}
+            />
           </picture>
         </div>
         <div className={styles.description}>
