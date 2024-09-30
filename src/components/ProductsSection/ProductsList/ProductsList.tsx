@@ -1,7 +1,6 @@
 import { Product } from "@/services/types";
 import { ProductCard } from "./ProductCard/ProductCard";
 import styles from "./ProductsList.module.css";
-import { RedeemService } from "@/services";
 import { getUserData } from "@/lib/getUserData";
 
 interface ProductsListProps {

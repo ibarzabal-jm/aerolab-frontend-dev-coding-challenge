@@ -1,14 +1,21 @@
+.cardContainer {
+  height: 506px;
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   border: 1px solid var(--neutral-300);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .imageContainer {
   width: 100%;
-  height: 354px;
+  flex: 1 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,12 +38,6 @@
   composes: mobile-text-2-caps from "@/app/fonts.module.css";
 }
 
-@media (min-width: 768px) {
-  .imageContainer {
-    height: 345px;
-  }
-}
-
 @media (min-width: 1024px) {
   .name {
     font-size: 18px;
@@ -47,11 +48,5 @@
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.05em;
-  }
-}
-
-@media (min-width: 1280px) {
-  .imageContainer {
-    height: 344px;
   }
 }

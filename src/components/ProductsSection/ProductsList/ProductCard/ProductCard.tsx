@@ -3,17 +3,21 @@ import styles from "./ProductCard.module.css";
 import { Product } from "@/services/types";
 import { BuyButton } from "./BuyButton/BuyButton";
 
+import { getImage } from "@/lib/getImage";
+
 interface ProductCardProps {
   product: Product;
   userPoints: number;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
+export const ProductCard: React.FC<ProductCardProps> = async ({
   product,
   userPoints,
 }) => {
+  const { base64 } = await getImage(product.img.hdUrl);
+
   return (
-    <div>
+    <div className={styles.cardContainer}>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <picture>
@@ -23,7 +27,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               alt={product.name}
               width={280}
               height={204}
-              sizes="(min-width: 1240px) 280px, 100vw"
+              placeholder="blur"
+              blurDataURL={base64}
             />
           </picture>
         </div>
