@@ -14,8 +14,8 @@ export const Container = ({
   innerClassName = "",
 }: PropsWithChildren<ContainerProps>) => {
   return (
-    <section id={id} className={`${styles.container} ${className}`}>
-      <div className={`${styles.inner} ${innerClassName}`}>{children}</div>
+    <section id={id} className={`${className} ${styles.container}`}>
+      <div className={`${innerClassName} ${styles.inner}`}>{children}</div>
     </section>
   );
 };
