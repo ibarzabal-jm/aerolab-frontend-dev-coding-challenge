@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Juanma Aerolab Challenge",
     images: [
       {
-        url: "https://juanma-aerolab-challenge.netlify.app/meta.png",
+        url: "https://juanma-aerolab-challenge.netlify.app/Metadata.png",
         width: 1200,
         height: 630,
       },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "An application to redeem products with points",
     images: [
       {
-        url: "https://juanma-aerolab-challenge.netlify.app/meta.png",
+        url: "https://juanma-aerolab-challenge.netlify.app/Metadata.png",
         width: 1200,
         height: 630,
       },
