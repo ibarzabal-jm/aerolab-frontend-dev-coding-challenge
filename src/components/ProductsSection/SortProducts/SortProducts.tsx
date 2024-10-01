@@ -2,7 +2,6 @@
 
 import { RadioButton } from "@/components/RadioButton/RadioButton";
 import { Sort } from "@/services/types";
-import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import styles from "./SortProducts.module.css";
 import { useRouter } from "next/navigation";
@@ -51,9 +50,8 @@ export const SortProducts = ({ currentSort }: SortProductsPorps) => {
           size="md"
           name={option.value}
           onChange={onChange}
-        >
-          {option.label}
-        </RadioButton>
+          label={option.label}
+        />
       ))}
     </div>
   );

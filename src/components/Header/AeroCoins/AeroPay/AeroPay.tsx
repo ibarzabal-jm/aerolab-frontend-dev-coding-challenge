@@ -73,9 +73,8 @@ export const AeroPay = forwardRef<HTMLDivElement, AeroPayProps>(
                 checked={selectedAmount === amount}
                 size="sm"
                 onChange={handleChangeRadioButton}
-              >
-                {amount}
-              </RadioButton>
+                label={amount}
+              />
             ))}
           </div>
 

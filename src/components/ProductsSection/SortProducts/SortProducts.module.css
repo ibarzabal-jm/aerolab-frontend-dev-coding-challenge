@@ -16,6 +16,7 @@
   .container {
     gap: 12px;
     width: min-content;
+    overflow-x: unset;
   }
 }
 
