@@ -12,8 +12,37 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "My Redeem App",
+  title: "My Redeem App - Juanma Aerolab Challenge",
   description: "An application to redeem products with points",
+  metadataBase: new URL("https://juanma-aerolab-challenge.netlify.app/"),
+  openGraph: {
+    title: "Juanma Aerolab Challenge",
+    description: "An application to redeem products with points",
+    url: "https://juanma-aerolab-challenge.netlify.app/",
+    siteName: "Juanma Aerolab Challenge",
+    images: [
+      {
+        url: "https://juanma-aerolab-challenge.netlify.app/meta.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Juanma Aerolab Challenge",
+    description: "An application to redeem products with points",
+    images: [
+      {
+        url: "https://juanma-aerolab-challenge.netlify.app/meta.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    creator: "@JuanmaPiojoso",
+  },
 };
 
 export default async function RootLayout({
