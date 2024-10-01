@@ -6,6 +6,7 @@
   width: 100dvw;
   scrollbar-width: none;
   white-space: nowrap;
+  padding-inline-end: 40px;
 }
 
 .title {
@@ -17,6 +18,7 @@
     gap: 12px;
     width: min-content;
     overflow-x: unset;
+    padding-inline-end: 0;
   }
 }
 

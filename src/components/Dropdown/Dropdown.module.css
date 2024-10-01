@@ -38,7 +38,19 @@
   border-radius: 8px;
   position: absolute;
 
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
   z-index: 1;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.closed {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .option {

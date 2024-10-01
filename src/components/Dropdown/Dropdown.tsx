@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import styles from "./Dropdown.module.css";
+import { useOnClickOutside } from "@/hooks/useOutsideClick";
 
 interface DropdownOption<T> {
   value: T;
@@ -110,6 +111,8 @@ export const Dropdown = <T,>({
     }
   }, [isOpen, activeIndex]);
 
+  useOnClickOutside(dropdownRef, handleCloseDropdown);
+
   return (
     <div
       className={styles.dropdown}
@@ -131,33 +134,33 @@ export const Dropdown = <T,>({
           {isOpen ? "▲" : "▼"}
         </span>
       </button>
-      {isOpen && (
-        <ul
-          className={styles.dropdownList}
-          role="listbox"
-          aria-labelledby="dropdown-label"
-          tabIndex={-1}
-        >
-          {options.map((option, index) => (
-            <li
-              key={index}
-              ref={(el) => setOptionRef(el, index)}
-              className={styles.option}
-              onClick={() => handleOptionClick(option, index)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  handleOptionClick(option, index);
-                }
-              }}
-              role="option"
-              aria-selected={option === selectedOption}
-              tabIndex={0}
-            >
-              {option.label}
-            </li>
-          ))}
-        </ul>
-      )}
+
+      <ul
+        className={`${styles.dropdownList} 
+        ${isOpen ? styles.open : styles.closed}`}
+        role="listbox"
+        aria-labelledby="dropdown-label"
+        tabIndex={-1}
+      >
+        {options.map((option, index) => (
+          <li
+            key={index}
+            ref={(el) => setOptionRef(el, index)}
+            className={styles.option}
+            onClick={() => handleOptionClick(option, index)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                handleOptionClick(option, index);
+              }
+            }}
+            role="option"
+            aria-selected={option === selectedOption}
+            tabIndex={0}
+          >
+            {option.label}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
