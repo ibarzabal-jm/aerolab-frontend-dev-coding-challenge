@@ -24,8 +24,10 @@
 }
 
 .primary:disabled {
-  background-image: var(--neutral-200);
+  background-image: unset;
+  background-color: var(--neutral-200);
   color: var(--neutral-600);
+  cursor: not-allowed;
 }
 
 .primary.isPending {

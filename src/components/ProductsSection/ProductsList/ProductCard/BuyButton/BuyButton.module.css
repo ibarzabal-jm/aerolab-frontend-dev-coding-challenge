@@ -8,6 +8,14 @@
   height: 20px;
 }
 
+.button:disabled .icon rect {
+  fill: var(--neutral-500);
+}
+
+.button:disabled:disabled .icon path {
+  fill: var(--neutral-0);
+}
+
 @media (min-width: 1024px) {
   .icon {
     width: 24px;

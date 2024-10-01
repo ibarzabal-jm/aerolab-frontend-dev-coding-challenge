@@ -42,21 +42,35 @@ export const BuyButton = ({
     });
   };
 
+  if (userPoints >= productCost) {
+    return (
+      <Button
+        isPending={isPending}
+        onClick={handleClick}
+        size="lg"
+        className={styles.button}
+      >
+        {isPending ? (
+          "Processing..."
+        ) : (
+          <>
+            Redeem for <AerolabIcon className={styles.icon} /> {productCost}
+          </>
+        )}
+      </Button>
+    );
+  }
+
   return (
     <Button
       isPending={isPending}
       onClick={handleClick}
-      disabled={userPoints < productCost}
+      disabled={true}
       size="lg"
       className={styles.button}
     >
-      {isPending ? (
-        "Processing..."
-      ) : (
-        <>
-          Redeem for <AerolabIcon className={styles.icon} /> {productCost}
-        </>
-      )}
+      You need <AerolabIcon className={styles.icon} />
+      {productCost - userPoints}
     </Button>
   );
 };
