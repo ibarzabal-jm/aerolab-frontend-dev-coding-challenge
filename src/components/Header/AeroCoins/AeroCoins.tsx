@@ -1,4 +1,3 @@
-import { RedeemService } from "@/services/index";
 import AeroCoinsClient from "./AeroCoinsClient";
 import { getUserData } from "@/lib/getUserData";
 

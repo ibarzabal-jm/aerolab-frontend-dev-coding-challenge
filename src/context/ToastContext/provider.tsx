@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import { ToastContext, ToastData, ToastPayload, ToastType } from "./context";
+import { ToastContext, ToastData, ToastPayload } from "./context";
 
 import styles from "./styles/ToastContainer.module.css";
 import { Toast } from "./Toast";
