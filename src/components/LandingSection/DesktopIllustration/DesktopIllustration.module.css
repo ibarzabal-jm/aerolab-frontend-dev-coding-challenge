@@ -4,15 +4,16 @@
 
 @media (min-width: 1280px) {
   .illustrationContainer {
+    --imageHeight: 795px;
     --offset: 125px;
+    --imageTop: -68px;
+    --gradientHeight: 600px;
     padding-top: var(--offset);
     margin-top: calc(var(--offset) * -1);
     border-radius: 104px;
     position: relative;
     height: calc(600px + var(--offset));
 
-    overflow: hidden;
-    display: block;
     flex: 0 1 722px;
     min-width: 610px;
 
@@ -22,15 +23,23 @@
 
   .illustration {
     position: absolute;
-    top: -68px;
+    top: var(--imageTop);
     left: 50%;
     transform: translateX(-50%);
+    clip-path: inset(
+      0px 0px
+        calc(
+          var(--imageHeight) - var(--offset) + var(--imageTop) -
+            var(--gradientHeight)
+        )
+        0px
+    );
   }
 
   .illustrationGradient {
     background-image: var(--gradient-bg-opacity);
     width: 100%;
-    flex: 1;
+    height: var(--gradientHeight);
     border-radius: 104px;
   }
 }

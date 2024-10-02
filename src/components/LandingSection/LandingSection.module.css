@@ -1,6 +1,6 @@
 .landingBackground {
-  background-size: 100% 29px;
-  background: url("/wave.svg") center center repeat;
+  background-repeat: repeat;
+  background-image: url("/wave.svg");
 }
 
 .landingContent {
@@ -45,7 +45,7 @@
   }
   .landingContent {
     justify-content: space-between;
-    gap: 30px;
+    gap: 15px;
     margin-block: 10px 32px;
     padding-block: 42px 80px;
   }
