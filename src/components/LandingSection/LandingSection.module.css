@@ -1,7 +1,5 @@
 .landingBackground {
   background-repeat: repeat;
-  background-position: center 0px;
-  background-size: 24%;
   background-image: url("/wave.svg");
 }
 
@@ -43,12 +41,13 @@
 
 @media (min-width: 1280px) {
   .landingBackground {
-    margin-block-start: 80px;
+    margin-block-start: 73px;
   }
   .landingContent {
     justify-content: space-between;
-    gap: 30px;
+    gap: 15px;
     margin-block: 10px 32px;
+    padding-block: 42px 80px;
   }
   .landingText {
     text-align: left;

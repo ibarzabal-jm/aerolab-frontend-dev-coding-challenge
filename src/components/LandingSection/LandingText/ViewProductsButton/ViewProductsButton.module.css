@@ -11,6 +11,11 @@
   background-image: var(--brand);
 
   margin-top: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-image: var(--brand-hover);
 }
 
 .text {
