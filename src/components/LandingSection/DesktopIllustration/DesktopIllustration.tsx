@@ -6,7 +6,7 @@ export const DesktopIllustration = () => {
   return (
     <div className={styles.illustrationContainer}>
       <Image
-        src="/hero-desktop.png"
+        src="/hero-desktop.webp"
         alt="Illustration"
         width={897}
         priority
