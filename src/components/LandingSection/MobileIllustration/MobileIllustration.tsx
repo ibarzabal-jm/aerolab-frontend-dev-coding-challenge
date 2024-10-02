@@ -1,17 +1,12 @@
 import Image from "next/image";
 
 import styles from "./MobileIllustration.module.css";
+import { HeroImage } from "../HeroImage/HeroImage";
 
 export const MobileIllustration = () => {
   return (
     <div className={styles.mobileIllustration}>
-      <Image
-        src="/hero-responsive.png"
-        alt="Illustration"
-        priority
-        width={580}
-        height={518}
-      />
+      <HeroImage />
     </div>
   );
 };

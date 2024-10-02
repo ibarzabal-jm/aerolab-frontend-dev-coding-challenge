@@ -26,6 +26,9 @@
     top: var(--imageTop);
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .illustration img {
     clip-path: inset(
       0px 0px
         calc(
