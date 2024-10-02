@@ -11,10 +11,10 @@ export async function ProductsList({ products }: ProductsListProps) {
   const { points } = await getUserData();
 
   return (
-    <ul className={styles.productsList}>
+    <div className={styles.productsList}>
       {products.map((product) => (
         <ProductCard key={product._id} userPoints={points} product={product} />
       ))}
-    </ul>
+    </div>
   );
 }
