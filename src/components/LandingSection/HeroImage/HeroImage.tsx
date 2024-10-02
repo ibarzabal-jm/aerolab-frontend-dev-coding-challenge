@@ -28,7 +28,7 @@ export const HeroImage = ({ className }: HeroImageProps) => {
     width: 580,
     height: 518,
     quality: 100,
-    src: "/hero-responsive.png",
+    src: "/hero-responsive.webp",
   });
 
   return (
@@ -40,9 +40,9 @@ export const HeroImage = ({ className }: HeroImageProps) => {
         media="(min-width: 1280px)"
       />
       <source
-        srcSet={"/hero-responsive.png"}
-        height={518}
-        width={580}
+        srcSet={mobile}
+        height={mobileHeight}
+        width={mobileWidth}
         media="(max-width: 1279px)"
       />
       <img {...rest} />
