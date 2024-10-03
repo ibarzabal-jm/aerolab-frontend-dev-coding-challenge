@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const ViewProductsButton = () => {
   return (
-    <Link href="/#products" className={styles.button}>
+    <Link prefetch={false} href="/#products" className={styles.button}>
       <span className={styles.text}>VIEW ALL PRODUCTS</span>
       <ArrowDownIcon aria-hidden="true" className={styles.icon} />
     </Link>
