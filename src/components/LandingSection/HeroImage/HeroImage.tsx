@@ -1,5 +1,4 @@
-import { getImgProps } from "next/dist/shared/lib/get-img-props";
-import Image, { getImageProps } from "next/image";
+import { getImageProps } from "next/image";
 
 interface HeroImageProps {
   className?: string;
